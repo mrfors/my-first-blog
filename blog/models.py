@@ -10,7 +10,7 @@ class Post(models.Model):
             default=timezone.now)
     published_date = models.DateTimeField(
             blank=True, null=True)
-    
+
 
     def publish(self):
         self.published_date = timezone.now()
@@ -27,6 +27,18 @@ class Tik(models.Model):
             default=timezone.now)
     published_date = models.DateTimeField(
             blank=True, null=True)
+    def publish(self):
+        self.published_date = timezone.now()
+        self.save()
+
+    def __str__(self):
+        return self.title
+class Dubrovka(models.Model):
+    author = models.ForeignKey('auth.User', on_delete=models.CASCADE)
+    title = models.CharField(max_length=400)
+    created_date = models.DateTimeField(
+            default=timezone.now)
+    media_file = models.FileField(upload_to='user_media')
     def publish(self):
         self.published_date = timezone.now()
         self.save()

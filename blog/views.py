@@ -4,6 +4,7 @@ from .models import Post
 from .models import Tik
 from .forms import PostForm
 
+
 # Create your views here.
 def post_list(request):
     posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
@@ -17,6 +18,8 @@ def tik_list(request):
 def tik_detail(request, pk):
     tik = get_object_or_404(Tik, pk=pk)
     return render(request, 'blog/tik_detail.html', {'tik': tik})
+
+
 
 def post_new(request):
     if request.method == "POST":
