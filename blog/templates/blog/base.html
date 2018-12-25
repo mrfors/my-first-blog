@@ -42,7 +42,7 @@
               {% for tik in tiks %}
               <li>{{ tik.title }}</li>
               {% endfor %}
-              <h1>TEST</h1>
+              <h1>Тест левый</h1>
 							<li ><a href="/">ТИК 1</a></li>
 							<li ><a href="/">ТИК 2</a></li>
 							<li ><a href="/">ТИК 3</a></li>
@@ -77,12 +77,23 @@
       <!--правый сайдбар-->
 			<aside class="right_block col-xs-3">
 				<nav class="border_bg">
-
-
-
+              <h1>Календарь выборов</h1>
+              <div align=center>
+              <div style="width:220px; border:1px solid #c0c0c0; padding:6px;">
+              <table id="calendar"  border="0" cellspacing="0" cellpadding="1">
+                <thead>
+                  <tr><td><b>‹</b><td colspan="5"><td><b>›</b>
+                  <tr><td>Пн<td>Вт<td>Ср<td>Чт<td>Пт<td>Сб<td>Вс
+                </thead>
+                <tbody></tbody>
+              </table>
+              </div>
+              </div>
+              <script src="{% static 'js/calendar.js' %}"></script>
+          <h1>Тест правый</h1>
 					<ul class="nav nav_list">
 							<li ><a href="/">Поле 1</a></li>
-							<li ><a href="/">Поле 2/a></li>
+							<li ><a href="/">Поле 2</a></li>
 							<li ><a href="/">Поле 3</a></li>
 					</ul>
 					<ul class="nav nav_list border_nav_list">
