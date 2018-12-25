@@ -10,15 +10,3 @@
       </div>
   {% endfor %}
 {% endblock %}
-
-{% block tikcontent %}
-  {% for tik in tiks %}
-      <div class="post">
-          <div class="date">
-              {{ tik.published_date }}
-          </div>
-          <h1><a href="{% url 'tik_detail' pk=tik.pk %}">{{ tik.title }}</a></h1>
-          <p>{{ tik.text|linebreaksbr }}</p>
-      </div>
-  {% endfor %}
-{% endblock %}
