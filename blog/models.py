@@ -8,7 +8,7 @@ class Post(models.Model):
     text = models.TextField(u'Текст')
     created_date = models.DateTimeField(
             default=timezone.now, verbose_name=u"Дата создания")
-    published_date = models.DateTimeField(
+    published_date = models.DateTimeField(default=timezone.now, 
             blank=True, null=True, verbose_name=u"Дата публикации")
 
 
