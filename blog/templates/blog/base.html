@@ -8,6 +8,7 @@
         <link rel="stylesheet" href="{% static 'css/blog.css' %}">
         <link rel="stylesheet" href="{% static 'css/style.css' %}">
         <link rel="stylesheet" href="{% static 'js/' %}">
+        <link rel="stylesheet" href="{% static 'css/csslist.css'%}">
 
     </head>
     <body>
@@ -42,25 +43,77 @@
               {% for tik in tiks %}
               <li>{{ tik.title }}</li>
               {% endfor %}
-              <h1>Тест левый</h1>
-							<li ><a href="/">ТИК 1</a></li>
-							<li ><a href="/">ТИК 2</a></li>
-							<li ><a href="/">ТИК 3</a></li>
-							<li ><a href="/">ТИК 4</a></li>
-							<li ><a href="/">ТИК 5</a></li>
-							<li ><a href="/">ТИК 6</a></li>
-							<li ><a href="/">ТИК 7</a></li>
-							<li ><a href="/">ТИК 8</a></li>
-							<li ><a href="/">ТИК 9</a></li>
-							<li ><a href="/">ТИК 10</a></li>
-							<li ><a href="/">ТИК 11</a></li>
-							<li ><a href="/">ТИК 12</a></li>
-							<li ><a href="/">ТИК 13</a></li>
+              <h1>Комисси</h1>
+              <li>
+                  <details>
+                    <summary class="treeHTML"><b>ТИК 1</b></summary>
+                    <div>О комиссии</div>
+                    <div>Докуметы ТИК</div>
+                  </details>
+              </li>
+              <li>
+                  <details>
+                    <summary class="treeHTML"><b>ТИК 2</b></summary>
+                    <div>О комиссии</div>
+                    <div>Докуметы ТИК</div>
+                  </details>
+              </li>
+              <li>
+                  <details>
+                    <summary class="treeHTML"><b>ТИК 3</b></summary>
+                    <div>О комиссии</div>
+                    <div>Докуметы ТИК</div>
+                  </details>
+              </li>
+              <li>
+                  <details>
+                    <summary class="treeHTML"><b>ТИК 4</b></summary>
+                    <div>О комиссии</div>
+                    <div>Докуметы ТИК</div>
+                  </details>
+              </li>
+              <li>
+                  <details>
+                    <summary class="treeHTML"><b>ТИК 5</b></summary>
+                    <div>О комиссии</div>
+                    <div>Докуметы ТИК</div>
+                  </details>
+              </li>
+              <li>
+                  <details>
+                    <summary class="treeHTML"><b>ТИК 6</b></summary>
+                    <div>О комиссии</div>
+                    <div>Докуметы ТИК</div>
+                  </details>
+              </li>
+              <li>
+                  <details>
+                    <summary class="treeHTML"><b>ТИК 7</b></summary>
+                    <div>О комиссии</div>
+                    <div>Докуметы ТИК</div>
+                  </details>
+              </li>
+				</ul>
+        <ul class="border_bg nav nav_list">
+							<li ><a href="http://www.bryansk.vybory.izbirkom.ru/bryansk/ik">О комиссии</a></li>
+							<li ><a href="news/index.html">Новости</a></li>
+							<li ><a href="zakonodatelstvo-o-vyborakh-i-referendumakh/index.html">Законодательство о выборах и референдумах</a></li>
+							<li ><a href="dokumenty-izbiratelnoy-komissii/index.html">Документы избирательной комиссии</a></li>
+							<li ><a href="regionalnye-otdeleniya-pp-v-ra/index.html">Политические партии</a></li>
+							<li ><a href="chislennost-izbirateley/index.html">Численность избирателей</a></li>
+							<li ><a href="informatsionnoe-obespechenie/index.html">Информационное обеспечение</a></li>
+							<li ><a href="obuchenie/index.html">Обучение</a></li>
+							<li ><a href="sudebnaya-praktika/index.html">Судебная практика</a></li>
+							<li ><a href="razdel-dlya-molodezhi/index.html">Раздел для молодежи</a></li>
+							<li ><a href="priemnaya-tsik-rossii/index.html">Приемная избирательной комиссии</a></li>
+							<li ><a href="arkhiv-vyborov-i-referendumov/index.html">Архив выборов и референдумов</a></li>
+							<li ><a href="sitemap/index.html">Карта сайта</a></li>
 				</ul>
 			</aside>
       <!--Центр-->
       <section class="center_block col-xs-6">
         <article class="grey_bg">
+          <img src="{% static "img/Admin-map-Bryansk-region.gif" %}" alt="My image"/>
           <ul class="nav nav-tabs">
 						<li class="active"><a href="#">НОВОСТИ</a></li>
 					</ul>
@@ -91,16 +144,23 @@
               </div>
               <script src="{% static 'js/calendar.js' %}"></script>
           <h1>Тест правый</h1>
-					<ul class="nav nav_list">
-							<li ><a href="/">Поле 1</a></li>
-							<li ><a href="/">Поле 2</a></li>
-							<li ><a href="/">Поле 3</a></li>
+          <ul class="nav nav_list">
+							<li ><a href="kontrolno-revizionnaya-sluzhba-pri-tsik/index.html">Контрольно-ревизионная служба при Избирательной комиссии</a></li>
+							<li ><a href="akkreditatsiya-smi/index.html">Аккредитация СМИ</a></li>
+							<li ><a href="obrashcheniya-o-narushenii-izbiratelnogo-zakonodatelstva/index.html">Обращения о нарушениях избирательного законодательства</a></li>
+							<li ><a href="povyshenie-pravovoy-kultury-izbirateley/index.html">Повышение правовой культуры избирателей</a></li>
+							<li ><a href="obyavlenie-tsik/index.html">Объявления Избирательной комиссии Брянской области</a></li>
+							<li ><a href="kadry/index.html">Кадры</a></li>
+							<li ><a href="informatsiya-o-zakupkakh-tovarov-rabot-uslug-dlya-obespecheniya-nuzhd-tsik/index.html">Информация о закупках товаров, работ, услуг для обеспечения нужд Избирательной комиссии</a></li>
+							<li ><a href="formirovanie-uchastkovykh-izbiratelnykh-komissiy/index.html">Формирование участковых избирательных комиссий и резерва составов участковых комиссий</a></li>
+							<li ><a href="ispolzovannie-pri-golosovanii-na-vyborakh-referendumakh-kompleksov-obrabotki-izbiratelnykh-byulleten/index.html">Использование при голосовании на выборах, референдумах комплексов обработки избирательных бюллетеней, средствами видеонаблюдения и трансляции изображения</a></li>
+							<li ><a href="voprosy-protivodeystviya-korruptsii/index.html">Вопросы противодействия коррупции</a></li>
 					</ul>
 					<ul class="nav nav_list border_nav_list">
-							<li ><a href="/">Поле 1</a></li>
-							<li ><a href="/">Поле 2</a></li>
-							<li ><a href="/">Поле 3</a></li>
-							<li ><a href="/">Поле 4</a></li>
+							<li ><a href="arkhiv-novostei/index.html">Архив новостей</a></li>
+							<li ><a href="arkhiv-dokumentov/index.html">Архив документов</a></li>
+							<li ><a href="gallery/index.html">Фотоальбом</a></li>
+							<li ><a href="search/index.html">Поиск</a></li>
 					</ul>
 				</nav>
           			</aside>
