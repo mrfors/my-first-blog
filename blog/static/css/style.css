@@ -1,3 +1,4 @@
+{% load static %}
 /* CSS Document */
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=latin,cyrillic-ext,cyrillic);
 @import url(https://fonts.googleapis.com/css?family=Noto+Sans:400,700&amp;subset=latin,cyrillic-ext);
@@ -66,7 +67,7 @@ a:focus {
 .button span {
 	border:1px solid #fff;
 	border-radius:3px;
-	background: url("../images/bat_bg.png") left center repeat-x;
+	background: url("../imabat_bg.png") left center repeat-x;
 	font-size:10px;
 	text-transform:uppercase;
 	background-size:auto 100%;
@@ -86,7 +87,8 @@ a:focus {
 	padding:10px 0 8px;
 }
 .search .search-inner-box input {
-    background: rgba(0, 0, 0, 0) url("../images/search_bg.jpg") repeat-x scroll left center;
+    background: rgba(0, 0, 0, 0) url("{% static "img/search_bg.jpg" %}") repeat-x scroll left center;
+
     border-color: #d0d0d0 #e4e4e4 #f6f6f6;
     border-style: solid;
     border-width: 1px;
@@ -175,7 +177,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#009bba', end
 }
 .top_nav ul.nav-justified > li {
     vertical-align: middle;
-	background:url('../images/nav_top_list.png') right center no-repeat;
+
+	background:url("static/img/av_top_list.png") right center no-repeat;
 	background-color:transparent;
 	display: table-cell;
     width: 1%
@@ -265,7 +268,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#009bba', end
 	border:1px solid #5cb4c8;
 	padding:25px 15px;
 	border-radius:5px;
-	background:url('../images/grad_bg.jpg') left center repeat-x;
+
+	background:url("img/grad_bg.jpg") left center repeat-x;
 	background-size:auto 100%;
 	overflow:hidden;
 }
@@ -280,7 +284,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#009bba', end
 
 }
 .footer_list li {
-	background:url('../images/nav_bot_list.png') center bottom no-repeat;
+
+	background:url("istatic/mg/nav_bot_list.png") center bottom no-repeat;
 	background-size:100% 2px;
 	padding:0 3px;
 }
@@ -301,7 +306,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#009bba', end
 }
 .social_list li a {
 	padding-left:30px;
-	background-image:url('../images/ico_list.png');
+
+	background-image:url("static/img/ico_list.png");
 	background-repeat:no-repeat;
 	line-height:1.2;
 }

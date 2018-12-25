@@ -22,7 +22,7 @@
               </p>
           </span>
       </div>
-
+<div class="top container">
       <nav class="top_nav">
 			<ul class="nav nav-justified">
 							<li ><a href="http://www.bryansk.vybory.izbirkom.ru/bryansk/ik">Избирательные комиссии</a></li>
@@ -36,12 +36,12 @@
       <!--ЛЕвый-->
       <aside class="left_block col-xs-3">
 				<ul class="border_bg nav nav_list">
-
           <div class="row">
 
               {% for tik in tiks %}
               <li>{{ tik.title }}</li>
               {% endfor %}
+            </div>
               <h1>Комисси</h1>
               <li>
                   <details>
@@ -156,7 +156,7 @@
 							<li ><a href="search/index.html">Поиск</a></li>
 					</ul>
 				</nav>
-          			</aside>
+    </aside>
 
     </div>
       <div>
@@ -201,6 +201,7 @@
       				</div>
       			</div>
       			</div>
+            
       			<div class="footer_panel row">
       				<div class="col-xs-6">
 
@@ -213,7 +214,9 @@
       <p>e-mail: <a href="mailto:ikbo@mail.ru">ikbo@mail.ru</a> </p>
       				</address>
       			</div>
+            </div>
       		</footer>
+
       </div>
     </body>
 </html>

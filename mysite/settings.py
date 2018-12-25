@@ -27,7 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1', 'MrFor.pythonanywhere.com']
 
-
+ADMIN_SITE_HEADER = "Администрирование ИС ТИК"
 # Application definition
 
 INSTALLED_APPS = [
