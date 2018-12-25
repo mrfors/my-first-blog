@@ -20,13 +20,13 @@ class Post(models.Model):
         return self.title
 
 class Tik(models.Model):
-    author = models.ForeignKey('auth.User', on_delete=models.CASCADE)
-    title = models.CharField(max_length=400)
-    text = models.TextField()
+    author = models.ForeignKey('auth.User', on_delete=models.CASCADE, verbose_name=u"Пользователь")
+    title = models.CharField(u'Заголовко',max_length=400)
+    text = models.TextField(u'Текст')
     created_date = models.DateTimeField(
-            default=timezone.now)
+            default=timezone.now, verbose_name=u"Дата создания")
     published_date = models.DateTimeField(
-            blank=True, null=True)
+            blank=True, null=True, verbose_name=u"Дата публикации")
     def publish(self):
         self.published_date = timezone.now()
         self.save()
