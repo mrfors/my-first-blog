@@ -1,0 +1,12 @@
+{% extends 'blog/base.html' %}
+{% block 1tikcontent %}
+    <div class="post">
+        {% if tik.published_date %}
+            <div class="date">
+                {{ tik.published_date }}
+            </div>
+        {% endif %}
+        <h1>{{ tik.title }}</h1>
+        <p>{{ tik.text|linebreaksbr }}</p>
+    </div>
+{% endblock %}
