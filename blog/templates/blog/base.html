@@ -7,7 +7,9 @@
         <link href='//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="{% static 'css/blog.css' %}">
         <link rel="stylesheet" href="{% static 'css/style.css' %}">
-        <link rel="stylesheet" href="{% static 'css/csslist.css'%}">
+        <link rel="stylesheet" href="{% static 'css/csslist.css' %}">
+        <link rel="stylesheet" href="{% static 'css/eventCalendar.css' %}">
+	      <link rel="stylesheet" href="{% static 'css/eventCalendar_theme_responsive.css'%}">
 
     </head>
     <body>
@@ -33,7 +35,7 @@
 				</div>
 				<div class="cecutient col-xs-4">
 					<!--<a id="uhvb" href="javascript:void(0);" onclick="uvcl()" class="in_cecutient">Ресурс для слабовидящих</a>-->
-					<a id="uhvb" href="http://www.bryansk.izbirkom.ru/special/news.php" onclick="uvcl()" class="in_cecutient"></a>
+					<a id="uhvb" href="http://mrfor.pythonanywhere.com/" onclick="uvcl()" class="in_cecutient"></a>
 				</div>
 			</div>
 			<div class="logo_block">
@@ -65,52 +67,38 @@
       <!--ЛЕвый-->
       <aside class="left_block col-xs-3">
 				<ul class="border_bg nav nav_list">
-                  <details class="border_bg nav nav_list">
-                    <summary class="treeHTML"><b>ТИК 1</b></summary>
-                    <div>О комиссии</div>
-                    <div>Докуметы ТИК</div>
+                  <details>
+                    <summary class="treeHTML"><font color ='#005e9e'>ТИК 1</font></summary>
+                    <div><font color ='#005e9e'>О комиссии</font></div>
+                    <div><font color ='#005e9e'>Докуметы ТИК</font></div>
                   </details>
               </li>
               <li>
                   <details>
-                    <summary class="treeHTML"><b>ТИК 2</b></summary>
-                    <div>О комиссии</div>
-                    <div>Докуметы ТИК</div>
+                    <summary class="treeHTML"><font color ='#005e9e'>ТИК 2</font></summary>
+                    <div><font color ='#005e9e'>О комиссии</font></div>
+                    <div><font color ='#005e9e'>Докуметы ТИК</font></div>
                   </details>
               </li>
               <li>
                   <details>
-                    <summary class="treeHTML"><b>ТИК 3</b></summary>
-                    <div>О комиссии</div>
-                    <div>Докуметы ТИК</div>
+                    <summary class="treeHTML"><font color ='#005e9e'>ТИК 3</font></summary>
+                    <div><font color ='#005e9e'>О комиссии</font></div>
+                    <div><font color ='#005e9e'>Докуметы ТИК</font></div>
                   </details>
               </li>
               <li>
                   <details>
-                    <summary class="treeHTML"><b>ТИК 4</b></summary>
-                    <div>О комиссии</div>
-                    <div>Докуметы ТИК</div>
+                    <summary class="treeHTML"><font color ='#005e9e'>ТИК 4</font></summary>
+                    <div><font color ='#005e9e'>О комиссии</font></div>
+                    <div><font color ='#005e9e'>Докуметы ТИК</font></div>
                   </details>
               </li>
               <li>
                   <details>
-                    <summary class="treeHTML"><b>ТИК 5</b></summary>
-                    <div>О комиссии</div>
-                    <div>Докуметы ТИК</div>
-                  </details>
-              </li>
-              <li>
-                  <details>
-                    <summary class="treeHTML"><b>ТИК 6</b></summary>
-                    <div>О комиссии</div>
-                    <div>Докуметы ТИК</div>
-                  </details>
-              </li>
-              <li>
-                  <details>
-                    <summary class="treeHTML"><b>ТИК 7</b></summary>
-                    <div>О комиссии</div>
-                    <div>Докуметы ТИК</div>
+                    <summary class="treeHTML"><font color ='#005e9e'>ТИК 5</font></summary>
+                    <div><font color ='#005e9e'>О комиссии</font></div>
+                    <div><font color ='#005e9e'>Докуметы ТИК</font></div>
                   </details>
               </li>
 				</ul>
@@ -157,20 +145,51 @@
       <!--правый сайдбар-->
 			<aside class="right_block col-xs-3">
         				<nav class="border_bg">
-                      <h1>Календарь выборов</h1>
-                      <div align=center>
-                      <div style="width:220px; border:1px solid #c0c0c0; padding:6px;">
-                      <table id="calendar"  border="0" cellspacing="0" cellpadding="1">
-                        <thead>
-                          <tr><td><b>‹</b><td colspan="5"><td><b>›</b>
-                          <tr><td>Пн<td>Вт<td>Ср<td>Чт<td>Пт<td>Сб<td>Вс
-                        </thead>
-
-                      </table>
-                      </div>
-                      </div>
-                      <script src="{% static 'js/calendar.js' %}"></script>
-
+                      <!--Календарь-->
+                      <div id="eventCalendar" style="width: 300px; margin: 50px auto;"></div>
+                      <script src="http://code.jquery.com/jquery.min.js"></script>
+                    	<script src="{% static 'js/moment.js'%}"></script>
+                    	<script src="{% static 'js/jquery.eventCalendar.js'%}"></script>
+                    	<script>
+                      $(function(){
+                        		var data = [
+                        			{ "date": "2017-04-21 10:15:20", "title": "Событие 1", "description": "Lorem Ipsum dolor set", "url": "http://www.event3.com/" },
+                        			{ "date": "2017-04-18 10:15:20", "title": "Событие 2", "description": "Lorem Ipsum dolor set", "url": "" },
+                        			{ "date": "2017-04-01 10:15:20", "title": "Событие 3", "description": "Lorem Ipsum dolor set", "url": "http://www.event3.com/" },
+                        			{ "date": "2017-04-25 10:15:20", "title": "Событие 4", "description": "Lorem Ipsum dolor set", "url": "http://www.event3.com/" },
+                        		];
+                        		$('#eventCalendar').eventCalendar({
+                        			jsonData: data,
+                        			eventsjson: 'data.json',
+                        			jsonDateFormat: 'human',
+                        			startWeekOnMonday: false,
+                        			openEventInNewWindow: true,
+                        			dateFormat: 'DD-MM-YYYY',
+                        			showDescription: false,
+                        			locales: {
+                        				locale: "ru",
+                        				txt_noEvents: "Нет запланированных событий",
+                        				txt_SpecificEvents_prev: "",
+                        				txt_SpecificEvents_after: "события:",
+                        				txt_NextEvents: "Следующие события:",
+                        				txt_GoToEventUrl: "Смотреть",
+                        				moment: {
+                        					"months" : [ "Январь", "Февраль", "Март", "Апрель", "Май", "Июнь",
+                        					"Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь" ],
+                        					"monthsShort" : [ "Янв", "Фев", "Мар", "Апр", "Май", "Июн",
+                        					"Июл", "Авг", "Сен", "Окт", "Ноя", "Дек" ],
+                        					"weekdays" : [ "Воскресенье", "Понедельник","Вторник","Среда","Четверг",
+                        					"Пятница","Суббота" ],
+                        					"weekdaysShort" : [ "Вс","Пн","Вт","Ср","Чт",
+                        					"Пт","Сб" ],
+                        					"weekdaysMin" : [ "Вс","Пн","Вт","Ср","Чт",
+                        					"Пт","Сб" ]
+                        				}
+                        			}
+                        		});
+                        	});
+                        	</script>
+                      <!--Календарь-->
                   <ul class="nav nav_list border_nav_list">
         							<li ><a href="kontrolno-revizionnaya-sluzhba-pri-tsik/index.html">Контрольно-ревизионная служба при Избирательной комиссии</a></li>
         							<li ><a href="akkreditatsiya-smi/index.html">Аккредитация СМИ</a></li>

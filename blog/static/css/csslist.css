@@ -10,11 +10,9 @@
 }
 .treeHTML div {
   position: relative;
-  margin: 0 0 0 .5em;
-  padding: 0 0 0 1.2em;
 }
 .treeHTML div:not(:last-child) { /* необязательно */
-  border-left: 1px solid #ccc;
+  border-left: 1px solid #02b8cd;
 }
 .treeHTML div:before { /* необязательно */
   content: "";
@@ -23,14 +21,21 @@
   left: 0;
   width: 1.1em;
   height: .5em;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #02b8cd;
 }
 .treeHTML div:last-child:before { /* необязательно */
-  border-left: 1px solid #ccc;
+  border-left: 1px solid #02b8cd;
 }
 .treeHTML summary { /* стилями можно задать любую форму, например, тот же плюс. Я специально не стала усложнять, чтобы можно было проще разобраться в коде */
   position: absolute;
+  font: #02b8cd;
   top: 0;
   left: 0;
   cursor: pointer;
+  border: 1px solid #02b8cd;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+.treeHTML details[open] summary { /* убрать рамку при фокусе */
+  outline: none;
 }
