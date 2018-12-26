@@ -34,6 +34,3 @@
   left: 0;
   cursor: pointer;
 }
-.treeHTML details[open] summary { /* убрать рамку при фокусе */
-  outline: none;
-}

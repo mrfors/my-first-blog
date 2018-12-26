@@ -21,7 +21,7 @@ class Post(models.Model):
 
 class Tik(models.Model):
     author = models.ForeignKey('auth.User', on_delete=models.CASCADE, verbose_name=u"Пользователь")
-    title = models.CharField(u'Заголовко',max_length=400)
+    title = models.CharField(u'Заголовок',max_length=400)
     text = models.TextField(u'Текст')
     created_date = models.DateTimeField(
             default=timezone.now, verbose_name=u"Дата создания")
@@ -51,7 +51,7 @@ class Calendar(models.Model):
     title = models.CharField(u'Название события', max_length=400)
     text = models.TextField(u'Описание события')
     created_date = models.DateTimeField(
-            default=timezone.now, verbose_name=u"Дата создания")
+            default=timezone.now, verbose_name=u"Дата события")
 
 
 
