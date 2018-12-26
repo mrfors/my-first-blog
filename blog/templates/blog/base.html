@@ -11,18 +11,47 @@
 
     </head>
     <body>
-      <div class="page-header">
-        {% if user.is_authenticated %}
-          <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
-        {% endif %}
-          <span style="FONT-FAMILY: Courier New; MARGIN-LEFT: 50px">
-              <p style="TEXT-ALIGN: center"><span style="COLOR: #005b7e"><font face="Arial" size="6">ИЗБИРАТЕЛЬНАЯ КОМИССИЯ
-                  <br />
-                БРЯНСКОЙ ОБЛАСТИ</font></span>
-              </p>
-          </span>
-      </div>
 <div class="top container">
+      <header class="header">
+			<div class="top_panel row">
+				<div id="search" class="search col-xs-2">
+
+						<form action="/search/">
+							<div class="rounded-box">
+								<div class="search-inner-box">
+									<input type="text" maxlength="50" name="q" placeholder="Поиск">
+								</div>
+							</div>
+						</form>					<!--div id="search-button">
+							<input id="search-submit-button" type="submit" value="Поиск" onfocus="this.blur();" name="">
+						</div-->
+
+				</div>
+				<div class="col-xs-6">
+
+<p style="COLOR: #004a80; FONT-SIZE: 14px"><nobr><a href="http://www.cikrf.ru/personal/profile/"><font size="2" face="Arial" color="#003370"><strong>ЛИЧНЫЙ&nbsp;КАБИНЕТ&nbsp;ИЗБИРАТЕЛЯ</strong></font></a><font size="2" face="Arial" color="#003370"><strong> <span style="COLOR: #aaaaff">|</span> </strong></font><a href="http://www.cikrf.ru/services/lk_address/"><font size="2" face="Arial" color="#003370"><strong>НАЙДИ&nbsp;СВОЙ&nbsp;ИЗБИРАТЕЛЬНЫЙ&nbsp;УЧАСТОК</strong></font></a><font size="2" face="Arial" color="#003370"><strong> <span style="COLOR: #aaaaff">|</span>&nbsp;</strong></font><a href="http://www.cikrf.ru/services/lk_mail/"><font size="2" face="Arial" color="#003370"><strong>НАЙДИ&nbsp;СЕБЯ&nbsp;В&nbsp;СПИСКЕ ИЗБИРАТЕЛЕЙ</strong></font></a></nobr></p>
+				</div>
+				<div class="cecutient col-xs-4">
+					<!--<a id="uhvb" href="javascript:void(0);" onclick="uvcl()" class="in_cecutient">Ресурс для слабовидящих</a>-->
+					<a id="uhvb" href="http://www.bryansk.izbirkom.ru/special/news.php" onclick="uvcl()" class="in_cecutient"></a>
+				</div>
+			</div>
+			<div class="logo_block">
+				<h1 class="logo col-xs-12">
+					<a href="http://www.bryansk.izbirkom.ru/"><img style="margin-top:20px" src="%D0%98%D0%B7%D0%B1%D0%B8%D1%80%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F%20%D0%BA%D0%BE%D0%BC%D0%B8%D1%81%D1%81%D0%B8%D1%8F%20%D0%91%D1%80%D1%8F%D0%BD%D1%81%D0%BA%D0%BE%D0%B9%20%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D0%B8_files/logo1.png"></a>
+					<span style="FONT-FAMILY: Courier New; MARGIN-LEFT: 50px">
+  <p style="TEXT-ALIGN: center"><span style="COLOR: #005b7e"><font size="6" face="Arial">ИЗБИРАТЕЛЬНАЯ КОМИССИЯ
+        <br>
+      БРЯНСКОЙ ОБЛАСТИ</font></span></p>
+</span>					<a href="http://www.bryansk.izbirkom.ru/"><img style="margin-top:20px; float:right;" src="%D0%98%D0%B7%D0%B1%D0%B8%D1%80%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F%20%D0%BA%D0%BE%D0%BC%D0%B8%D1%81%D1%81%D0%B8%D1%8F%20%D0%91%D1%80%D1%8F%D0%BD%D1%81%D0%BA%D0%BE%D0%B9%20%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D0%B8_files/logo5.png"></a>
+</h1>
+				<div class="logo_panel col-xs-12">
+					<data class="data">26 декабря 2018,&nbsp;08:18</data>
+					<a href="javascript:window.print();" class="print">Версия для печати</a>
+				</div>
+			</div>
+		</header>
+
       <nav class="top_nav">
 			<ul class="nav nav-justified">
 							<li ><a href="http://www.bryansk.vybory.izbirkom.ru/bryansk/ik">Избирательные комиссии</a></li>
@@ -36,76 +65,83 @@
       <!--ЛЕвый-->
       <aside class="left_block col-xs-3">
 				<ul class="border_bg nav nav_list">
+
           <div class="row">
 
               {% for tik in tiks %}
               <li>{{ tik.title }}</li>
               {% endfor %}
-            </div>
               <h1>Комисси</h1>
               <li>
+              </div>
                   <details>
-                    <summary class="treeHTML"><b>Карачаев</b></summary>
+                    <summary class="treeHTML"><b>ТИК 1</b></summary>
                     <div>О комиссии</div>
-                    <div>Новости комиссии</div>
                     <div>Докуметы ТИК</div>
                   </details>
               </li>
               <li>
                   <details>
-                    <summary class="treeHTML"><b>Почеп</b></summary>
+                    <summary class="treeHTML"><b>ТИК 2</b></summary>
                     <div>О комиссии</div>
-                    <div>Новости комиссии</div>
                     <div>Докуметы ТИК</div>
                   </details>
               </li>
               <li>
                   <details>
-                    <summary class="treeHTML"><b>Дубровка</b></summary>
+                    <summary class="treeHTML"><b>ТИК 3</b></summary>
                     <div>О комиссии</div>
-                    <div>Новости комиссии</div>
                     <div>Докуметы ТИК</div>
                   </details>
               </li>
               <li>
                   <details>
-                    <summary class="treeHTML"><b>Клинцы</b></summary>
+                    <summary class="treeHTML"><b>ТИК 4</b></summary>
                     <div>О комиссии</div>
-                    <div>Новости комиссии</div>
                     <div>Докуметы ТИК</div>
                   </details>
               </li>
               <li>
                   <details>
-                    <summary class="treeHTML"><b>Погар</b></summary>
+                    <summary class="treeHTML"><b>ТИК 5</b></summary>
                     <div>О комиссии</div>
-                    <div>Новости комиссии</div>
+                    <div>Докуметы ТИК</div>
+                  </details>
+              </li>
+              <li>
+                  <details>
+                    <summary class="treeHTML"><b>ТИК 6</b></summary>
+                    <div>О комиссии</div>
+                    <div>Докуметы ТИК</div>
+                  </details>
+              </li>
+              <li>
+                  <details>
+                    <summary class="treeHTML"><b>ТИК 7</b></summary>
+                    <div>О комиссии</div>
                     <div>Докуметы ТИК</div>
                   </details>
               </li>
 				</ul>
         <ul class="border_bg nav nav_list">
 							<li ><a href="http://www.bryansk.vybory.izbirkom.ru/bryansk/ik">О комиссии</a></li>
-							<li ><a href="http://www.bryansk.izbirkom.ru/news/">Новости</a></li>
-							<li ><a href="http://www.bryansk.izbirkom.ru/zakonodatelstvo-o-vyborakh-i-referendumakh/">Законодательство о выборах и референдумах</a></li>
-							<li ><a href="http://www.bryansk.izbirkom.ru/dokumenty-izbiratelnoy-komissii/">Документы избирательной комиссии</a></li>
-							<li ><a href="http://www.bryansk.izbirkom.ru/regionalnye-otdeleniya-pp-v-ra/">Политические партии</a></li>
-							<li ><a href="http://www.bryansk.izbirkom.ru/chislennost-izbirateley/">Численность избирателей</a></li>
-							<li ><a href="http://www.bryansk.izbirkom.ru/informatsionnoe-obespechenie/">Информационное обеспечение</a></li>
-							<li ><a href="http://www.bryansk.izbirkom.ru/obuchenie/">Обучение</a></li>
-							<li ><a href="http://www.bryansk.izbirkom.ru/sudebnaya-praktika/">Судебная практика</a></li>
-							<li ><a href="http://www.bryansk.izbirkom.ru/razdel-dlya-molodezhi/">Раздел для молодежи</a></li>
-							<li ><a href="http://www.bryansk.izbirkom.ru/priemnaya-tsik-rossii/">Приемная избирательной комиссии</a></li>
-							<li ><a href="http://www.bryansk.izbirkom.ru/arkhiv-vyborov-i-referendumov/">Архив выборов и референдумов</a></li>
-							<li ><a href="http://www.bryansk.izbirkom.ru/arkhiv-vyborov-i-referendumov/">Карта сайта</a></li>
+							<li ><a href="news/index.html">Новости</a></li>
+							<li ><a href="zakonodatelstvo-o-vyborakh-i-referendumakh/index.html">Законодательство о выборах и референдумах</a></li>
+							<li ><a href="dokumenty-izbiratelnoy-komissii/index.html">Документы избирательной комиссии</a></li>
+							<li ><a href="regionalnye-otdeleniya-pp-v-ra/index.html">Политические партии</a></li>
+							<li ><a href="chislennost-izbirateley/index.html">Численность избирателей</a></li>
+							<li ><a href="informatsionnoe-obespechenie/index.html">Информационное обеспечение</a></li>
+							<li ><a href="obuchenie/index.html">Обучение</a></li>
+							<li ><a href="sudebnaya-praktika/index.html">Судебная практика</a></li>
+							<li ><a href="razdel-dlya-molodezhi/index.html">Раздел для молодежи</a></li>
+							<li ><a href="priemnaya-tsik-rossii/index.html">Приемная избирательной комиссии</a></li>
+							<li ><a href="arkhiv-vyborov-i-referendumov/index.html">Архив выборов и референдумов</a></li>
+							<li ><a href="sitemap/index.html">Карта сайта</a></li>
 				</ul>
 			</aside>
       <!--Центр-->
       <section class="center_block col-xs-6">
         <article class="grey_bg">
-          <ul class="nav nav-tabs">
-						<li class="active"><a href="#">Карта комиссии</a></li>
-					</ul>
           <img src="{% static "img/Admin-map-Bryansk-region.gif" %}" alt="My image"/>
           <ul class="nav nav-tabs">
 						<li class="active"><a href="#">НОВОСТИ</a></li>
@@ -122,44 +158,43 @@
     </section>
       <!--правый сайдбар-->
 			<aside class="right_block col-xs-3">
-				<nav class="border_bg">
-              <h1>Календарь выборов</h1>
-              <div align=center>
-              <div style="width:220px; border:1px solid #c0c0c0; padding:6px;">
-              <table id="calendar"  border="0" cellspacing="0" cellpadding="1">
-                <thead>
-                  <tr><td><b>‹</b><td colspan="5"><td><b>›</b>
-                  <tr><td>Пн<td>Вт<td>Ср<td>Чт<td>Пт<td>Сб<td>Вс
-                </thead>
-                <tbody></tbody>
-              </table>
-              </div>
-              </div>
-              <script src="{% static 'js/calendar.js' %}"></script>
-              <br><br>
-          <ul class="nav nav_list">
-							<li ><a href="kontrolno-revizionnaya-sluzhba-pri-tsik/index.html">Контрольно-ревизионная служба при Избирательной комиссии</a></li>
-							<li ><a href="akkreditatsiya-smi/index.html">Аккредитация СМИ</a></li>
-							<li ><a href="obrashcheniya-o-narushenii-izbiratelnogo-zakonodatelstva/index.html">Обращения о нарушениях избирательного законодательства</a></li>
-							<li ><a href="povyshenie-pravovoy-kultury-izbirateley/index.html">Повышение правовой культуры избирателей</a></li>
-							<li ><a href="obyavlenie-tsik/index.html">Объявления Избирательной комиссии Брянской области</a></li>
-							<li ><a href="kadry/index.html">Кадры</a></li>
-							<li ><a href="informatsiya-o-zakupkakh-tovarov-rabot-uslug-dlya-obespecheniya-nuzhd-tsik/index.html">Информация о закупках товаров, работ, услуг для обеспечения нужд Избирательной комиссии</a></li>
-							<li ><a href="formirovanie-uchastkovykh-izbiratelnykh-komissiy/index.html">Формирование участковых избирательных комиссий и резерва составов участковых комиссий</a></li>
-							<li ><a href="ispolzovannie-pri-golosovanii-na-vyborakh-referendumakh-kompleksov-obrabotki-izbiratelnykh-byulleten/index.html">Использование при голосовании на выборах, референдумах комплексов обработки избирательных бюллетеней, средствами видеонаблюдения и трансляции изображения</a></li>
-							<li ><a href="voprosy-protivodeystviya-korruptsii/index.html">Вопросы противодействия коррупции</a></li>
-					</ul>
-					<ul class="nav nav_list border_nav_list">
-							<li ><a href="arkhiv-novostei/index.html">Архив новостей</a></li>
-							<li ><a href="arkhiv-dokumentov/index.html">Архив документов</a></li>
-							<li ><a href="gallery/index.html">Фотоальбом</a></li>
-							<li ><a href="search/index.html">Поиск</a></li>
-					</ul>
-				</nav>
-    </aside>
-
+        				<nav class="border_bg">
+                      <h1>Календарь выборов</h1>
+                      <div align=center>
+                      <div style="width:220px; border:1px solid #c0c0c0; padding:6px;">
+                      <table id="calendar"  border="0" cellspacing="0" cellpadding="1">
+                        <thead>
+                          <tr><td><b>‹</b><td colspan="5"><td><b>›</b>
+                          <tr><td>Пн<td>Вт<td>Ср<td>Чт<td>Пт<td>Сб<td>Вс
+                        </thead>
+                        <tbody></tbody>
+                      </table>
+                      </div>
+                      </div>
+                      <script src="{% static 'js/calendar.js' %}"></script>
+                      <br><br
+                  <ul class="nav nav_list">
+        							<li ><a href="kontrolno-revizionnaya-sluzhba-pri-tsik/index.html">Контрольно-ревизионная служба при Избирательной комиссии</a></li>
+        							<li ><a href="akkreditatsiya-smi/index.html">Аккредитация СМИ</a></li>
+        							<li ><a href="obrashcheniya-o-narushenii-izbiratelnogo-zakonodatelstva/index.html">Обращения о нарушениях избирательного законодательства</a></li>
+        							<li ><a href="povyshenie-pravovoy-kultury-izbirateley/index.html">Повышение правовой культуры избирателей</a></li>
+        							<li ><a href="obyavlenie-tsik/index.html">Объявления Избирательной комиссии Брянской области</a></li>
+        							<li ><a href="kadry/index.html">Кадры</a></li>
+        							<li ><a href="informatsiya-o-zakupkakh-tovarov-rabot-uslug-dlya-obespecheniya-nuzhd-tsik/index.html">Информация о закупках товаров, работ, услуг для обеспечения нужд Избирательной комиссии</a></li>
+        							<li ><a href="formirovanie-uchastkovykh-izbiratelnykh-komissiy/index.html">Формирование участковых избирательных комиссий и резерва составов участковых комиссий</a></li>
+        							<li ><a href="ispolzovannie-pri-golosovanii-na-vyborakh-referendumakh-kompleksov-obrabotki-izbiratelnykh-byulleten/index.html">Использование при голосовании на выборах, референдумах комплексов обработки избирательных бюллетеней, средствами видеонаблюдения и трансляции изображения</a></li>
+        							<li ><a href="voprosy-protivodeystviya-korruptsii/index.html">Вопросы противодействия коррупции</a></li>
+        					</ul>
+        					<ul class="nav nav_list border_nav_list">
+        							<li ><a href="arkhiv-novostei/index.html">Архив новостей</a></li>
+        							<li ><a href="arkhiv-dokumentov/index.html">Архив документов</a></li>
+        							<li ><a href="gallery/index.html">Фотоальбом</a></li>
+        							<li ><a href="search/index.html">Поиск</a></li>
+        					</ul>
+        				</nav>
+          			</aside>
     </div>
-      <div>
+
         <footer>
       			<div class="footer_bg">
       			<div class="footer_bg2">
@@ -201,7 +236,6 @@
       				</div>
       			</div>
       			</div>
-            
       			<div class="footer_panel row">
       				<div class="col-xs-6">
 
@@ -214,9 +248,7 @@
       <p>e-mail: <a href="mailto:ikbo@mail.ru">ikbo@mail.ru</a> </p>
       				</address>
       			</div>
-            </div>
       		</footer>
-
       </div>
     </body>
 </html>

@@ -45,3 +45,19 @@ class Dubrovka(models.Model):
 
     def __str__(self):
         return self.title
+
+class Calendar(models.Model):
+    author = models.ForeignKey('auth.User', on_delete=models.CASCADE, verbose_name=u"Пользователь")
+    title = models.CharField(u'Название события', max_length=400)
+    text = models.TextField(u'Описание события')
+    created_date = models.DateTimeField(
+            default=timezone.now, verbose_name=u"Дата создания")
+
+
+
+    def publish(self):
+        self.published_date = timezone.now()
+        self.save()
+
+    def __str__(self):
+        return self.title

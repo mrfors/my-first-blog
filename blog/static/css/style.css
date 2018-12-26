@@ -6,6 +6,13 @@
 font-family: 'Open Sans', sans-serif;
 font-family: 'Noto Sans', sans-serif;
 */
+
+.dataR{
+    position: absolute;
+    text-align: right;
+    top: -7px;
+    right: 10px;
+}
 body {
 	min-width:1170px;
 	background-color:#e4ecef;
@@ -67,7 +74,7 @@ a:focus {
 .button span {
 	border:1px solid #fff;
 	border-radius:3px;
-	background: url("../imabat_bg.png") left center repeat-x;
+	background: url("img/imabat_bg.png") left center repeat-x;
 	font-size:10px;
 	text-transform:uppercase;
 	background-size:auto 100%;
