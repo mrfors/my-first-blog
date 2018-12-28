@@ -11,9 +11,27 @@
         <link rel="stylesheet" href="{% static 'css/csslist.css' %}">
         <link rel="stylesheet" href="{% static 'css/eventCalendar.css' %}">
 	      <link rel="stylesheet" href="{% static 'css/eventCalendar_theme_responsive.css'%}">
+        <link href="{% static 'css/bootstrap.css'%}" rel="stylesheet">
 
     </head>
 <body>
+
+  <style>
+  	 #hpvgd,.h-mdiv,.h-mdiv2,.h-ldiv,.h-rdiv {background:#edf5f8; color:#6D6D6D;}
+  	 #hpvgd {width:100%; z-index:100; width:100%; border-bottom:2px solid rgb(230,230,230);}
+  	 .h-mdiv {display:none; position:relative; margin:auto; text-alegn:center;}
+  	 .h-mdiv2 {display:none; position:fixed; margin:auto; text-alegn:center; width:400px; height:200px;}
+  	 .h-ldiv {float:left; padding:7px 10px 7px 0px;}
+  	 .h-rdiv {position:absolute; top:7px; right:0px; text-align:right;}
+  	 .h-ni {display:none !important;}
+  	 a.hcmaf {color:red; margin-left:5px; font-size:20px; font-weight:bold;}
+  	 a.h-anl {color:#2a72cc;}
+  	 a.h-al {color:#ED664B;}
+  	 .h-fi {font-weight:bold; border-radius:50%; padding:0px 8px; margin-right:5px; font-size:19px;}
+  	 .h-background-1 {color:#fff !important; background:#000 !important;}
+  	 .h-background-2 {color:#000 !important; background:#fff !important;}
+  	</style>
+<div id="panel"></div>
 <div class="top container">
       <header class="header">
 			<div class="top_panel row">
@@ -52,15 +70,15 @@
 		</header>
 
       <nav class="top_nav">
-			<ul class="nav nav-justified">
+  			<ul class="nav nav-justified">
 							<li ><a href="http://www.bryansk.vybory.izbirkom.ru/bryansk/ik">Избирательные комиссии</a></li>
 							<li ><a href="http://www.bryansk.vybory.izbirkom.ru/region/bryansk/">Выборы и референдумы</a></li>
 							<li ><a href="http://www.bryansk.izbirkom.ru/chislennost-izbirateley/">Численность избирателей</a></li>
 							<li ><a href="http://www.bryansk.vybory.izbirkom.ru/bryansk/npa">Нормативная база</a></li>
 							<li ><a href="http://www.cikrf.ru/law/federal_law/">Федеральное законодательство</a></li>
-			</ul>
-  		</nav>
-      <div class="content row">
+			   </ul>
+  	  </nav>
+  <div class="content row">
       <!--ЛЕвый-->
       <aside class="left_block col-xs-3">
 				<ul class="border_bg nav nav_list">
@@ -151,10 +169,10 @@
                     	<script>
                       $(function(){
                         		var data = [
-                        			{ "date": "2017-04-21 10:15:20", "title": "Событие 1", "description": "Lorem Ipsum dolor set", "url": "http://www.event3.com/" },
-                        			{ "date": "2017-04-18 10:15:20", "title": "Событие 2", "description": "Lorem Ipsum dolor set", "url": "" },
-                        			{ "date": "2017-04-01 10:15:20", "title": "Событие 3", "description": "Lorem Ipsum dolor set", "url": "http://www.event3.com/" },
-                        			{ "date": "2017-04-25 10:15:20", "title": "Событие 4", "description": "Lorem Ipsum dolor set", "url": "http://www.event3.com/" },
+                        			{ "date": "2018-12-29 10:15:20", "title": "Событие 1", "description": "Lorem Ipsum dolor set", "url": "http://www.event3.com/" },
+                        			{ "date": "2018-12-18 10:15:20", "title": "Событие 2", "description": "Lorem Ipsum dolor set", "url": "" },
+                        			{ "date": "2019-01-01 10:15:20", "title": "Событие 3", "description": "Lorem Ipsum dolor set", "url": "http://www.event3.com/" },
+                        			{ "date": "2019-01-25 10:15:20", "title": "Событие 4", "description": "Lorem Ipsum dolor set", "url": "http://www.event3.com/" },
                         		];
                         		$('#eventCalendar').eventCalendar({
                         			jsonData: data,
@@ -207,7 +225,7 @@
         							<li ><a href="search/index.html">Поиск</a></li>
         					</ul>
         				</nav>
-          			</aside>
+          	</aside>
     </div>
 
         <footer>
@@ -262,7 +280,6 @@
       				</address>
       			</div>
       		</footer>
-
       </div>
     </body>
 </html>
