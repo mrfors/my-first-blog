@@ -11,7 +11,10 @@
         <link rel="stylesheet" href="{% static 'css/csslist.css' %}">
         <link rel="stylesheet" href="{% static 'css/eventCalendar.css' %}">
 	      <link rel="stylesheet" href="{% static 'css/eventCalendar_theme_responsive.css'%}">
-        <link href="{% static 'css/bootstrap.css'%}" rel="stylesheet">
+        <link href="{% static 'css/bootstrap.css'%}" rel="stylesheet"><!--ПРОВЕРИТЬ ПОЧЕМУ ПОЛНОЕ ВЫДЕЛЕЛЕНИЕ ДЕЛАЕТ-->
+        <script href="{% static 'js/function.js'%}"></script>
+        <script href="{% static 'js/bootstrap.js'%}"></script>
+
 
     </head>
 <body>
@@ -162,7 +165,7 @@
         				<nav class="border_bg">
                       <!--Календарь-->
                       <h1>Календарь выборов</h1>
-                      <div id="eventCalendar" style="width: 300px; margin: 50px auto;"></div>
+                      <div id="eventCalendar" style="width: 100%; margin: 50px auto;"></div>
                       <script src="http://code.jquery.com/jquery.min.js"></script>
                     	<script src="{% static 'js/moment.js'%}"></script>
                     	<script src="{% static 'js/jquery.eventCalendar.js'%}"></script>
