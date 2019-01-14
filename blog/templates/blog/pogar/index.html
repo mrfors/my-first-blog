@@ -141,18 +141,14 @@
       <section class="center_block col-xs-6">
         <article class="grey_bg">
 
-          <ul class="nav nav-tabs">
-						<li class="active"><a href="#">КАРТА КОМИССИЙ</a></li>
-					</ul>
-          <img src="{% static "img/Admin-map-Bryansk-region.gif" %}" alt="My image">
 
           <ul class="nav nav-tabs">
-						<li class="active"><a href="#">НОВОСТИ</a></li>
+						<li class="active"><a href="#">НОВОСТИ ПОГАР</a></li>
 					</ul>
           <div class="tab-content">
     						<div class="tab-pane active">
     							<figure class="news_list">
-                {% block content %}
+                {% block content1 %}
                 {% endblock %}
               </div>
           </div>
@@ -164,51 +160,7 @@
 			<aside class="right_block col-xs-3">
         				<nav class="border_bg">
                       <!--Календарь-->
-                      <h1>Календарь выборов</h1>
-                      <div id="eventCalendar" style="width: 100%; margin: 50px auto;"></div>
-                      <script src="http://code.jquery.com/jquery.min.js"></script>
-                    	<script src="{% static 'js/moment.js'%}"></script>
-                    	<script src="{% static 'js/jquery.eventCalendar.js'%}"></script>
-                    	<script>
-                      $(function(){
-                        		var data = [
-                        			{ "date": "2018-12-29 10:15:20", "title": "Муниципальные выборы", "description": "Выборы в муниципальные организации", "url": "http://www.event3.com/" },
-                        			{ "date": "2018-12-18 10:15:20", "title": "Выборы главы района", "description": "Выборы из кандидатов", "url": "" },
-                        			{ "date": "2019-01-03 10:15:20", "title": "Встреча с избирателям", "description": "Встреча с желаюшими", "url": "http://www.event3.com/" },
-                        			{ "date": "2019-01-25 10:15:20", "title": "Встреча депутатов", "description": "Встреча по поводу 1", "url": "http://www.event3.com/" },
-                              { "date": "2019-01-01 10:15:20", "title": "Встреча нового года", "description": "Поздравление избирателей с Новым Годом", "url": "http://www.event3.com/" },
-                        		];
-                        		$('#eventCalendar').eventCalendar({
-                        			jsonData: data,
-                        			eventsjson: 'data.json',
-                        			jsonDateFormat: 'human',
-                        			startWeekOnMonday: false,
-                        			openEventInNewWindow: true,
-                        			dateFormat: 'DD-MM-YYYY',
-                        			showDescription: false,
-                        			locales: {
-                        				locale: "ru",
-                        				txt_noEvents: "Нет запланированных событий",
-                        				txt_SpecificEvents_prev: "",
-                        				txt_SpecificEvents_after: "события:",
-                        				txt_NextEvents: "Следующие события:",
-                        				txt_GoToEventUrl: "Смотреть",
-                        				moment: {
-                        					"months" : [ "Январь", "Февраль", "Март", "Апрель", "Май", "Июнь",
-                        					"Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь" ],
-                        					"monthsShort" : [ "Янв", "Фев", "Мар", "Апр", "Май", "Июн",
-                        					"Июл", "Авг", "Сен", "Окт", "Ноя", "Дек" ],
-                        					"weekdays" : [ "Воскресенье", "Понедельник","Вторник","Среда","Четверг",
-                        					"Пятница","Суббота" ],
-                        					"weekdaysShort" : [ "Вс","Пн","Вт","Ср","Чт",
-                        					"Пт","Сб" ],
-                        					"weekdaysMin" : [ "Вс","Пн","Вт","Ср","Чт",
-                        					"Пт","Сб" ]
-                        				}
-                        			}
-                        		});
-                        	});
-                        	</script>
+
                       <!--Календарь-->
                   <ul class="nav nav_list border_nav_list">
         							<li ><a href="kontrolno-revizionnaya-sluzhba-pri-tsik/index.html">Контрольно-ревизионная служба при Избирательной комиссии</a></li>

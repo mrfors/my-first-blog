@@ -1,0 +1,12 @@
+{% extends 'blog/pogar/index.html' %}
+{% block content1 %}
+    <div class="post">
+        {% if pogar.published_date %}
+            <div class="date">
+                {{ pogar.published_date }}
+            </div>
+        {% endif %}
+        <h1>{{ pogar.title }}</h1>
+        <p>{{ pogar.text|safe }}</p>
+    </div>
+{% endblock %}

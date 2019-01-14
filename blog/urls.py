@@ -10,5 +10,7 @@ urlpatterns = [
     path('post/<int:pk>/', views.post_detail, name='post_detail'), #path(r'^post/(?P<pk>\d+)/$', views.post_detail, name='post_detail'),
     path('post/new/', views.post_new, name='post_new'),#path(r'^post/new/$', views.post_new, name='post_new'),
     path('post/<int:pk>/edit/', views.post_edit, name='post_edit'),#path(r'^post/(?P<pk>\d+)/edit/$', views.post_edit, name='post_edit'),
+    path('pogar/', views.pogar_list, name='pogar_list'),
+    path('pogar/<int:pk>', views.pogar_detail, name='pogar_detail'),
     path('summernote/', include('django_summernote.urls')),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

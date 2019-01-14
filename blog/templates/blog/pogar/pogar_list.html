@@ -1,0 +1,12 @@
+{% extends 'blog/pogar/index.html' %}
+{% block content1 %}
+  {% for pogar in pogars %}
+      <div class="post">
+          <div class="date">
+              {{ pogar.published_date }}
+          </div>
+          <h1><a href="{% url 'pogar_detail' pk=pogar.pk %}">{{ pogar.title }}</a></h1>
+          <p>{{ pogar.text|safe }}</p>
+      </div>
+  {% endfor %}
+{% endblock %}
