@@ -144,8 +144,12 @@
           <ul class="nav nav-tabs">
 						<li class="active"><a href="#">КАРТА КОМИССИЙ</a></li>
 					</ul>
-          <img src="{% static "img/Admin-map-Bryansk-region.gif" %}" alt="My image">
-
+          <img src="{% static "img/Admin-map-Bryansk-region.gif" %}" width="550" height="500" usemap="#map" alt="My image">
+          <map name="map">
+            <area shape="poly" alt="Погар"
+               coords="212,410, 199,361, 209,329, 226,302, 226,315, 250,370, 264,391"
+               href="{% url 'pogar_list' %}">
+          </map>
           <ul class="nav nav-tabs">
 						<li class="active"><a href="#">НОВОСТИ</a></li>
 					</ul>
