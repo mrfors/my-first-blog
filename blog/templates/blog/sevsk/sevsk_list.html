@@ -1,0 +1,12 @@
+{% extends 'blog/sevsk/index.html' %}
+{% block contentPogar %}
+  {% for sevsk in sevsks %}
+      <div class="post">
+          <div class="date">
+              {{ sevsk.published_date }}
+          </div>
+          <h1><a href="{% url 'sevsk_detail' pk=sevsk.pk %}">{{ sevsk.title }}</a></h1>
+          <p>{{ sevsk.text|safe }}</p>
+      </div>
+  {% endfor %}
+{% endblock %}

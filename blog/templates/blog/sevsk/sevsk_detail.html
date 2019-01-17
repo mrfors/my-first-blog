@@ -1,0 +1,12 @@
+{% extends 'blog/sevsk/index.html' %}
+{% block contentSevsk %}
+    <div class="post">
+        {% if sevsk.published_date %}
+            <div class="date">
+                {{ sevsk.published_date }}
+            </div>
+        {% endif %}
+        <h1>{{ sevsk.title }}</h1>
+        <p>{{ sevsk.text|safe }}</p>
+    </div>
+{% endblock %}
